@@ -8,5 +8,5 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://www.frontendmentor.io/solutions/stats-preview-card-component-solution-qylvghc01o
+- Live Site URL: https://unkookerinho.github.io/Stats-preview-card-component-solution/
