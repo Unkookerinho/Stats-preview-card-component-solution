@@ -1,0 +1,229 @@
+/* 
+    CSS RESET 
+*/
+
+/* Better box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Delete default margin, padding and font style */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Responsive images etc. */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* 
+    VARIABLES 
+*/
+
+:root {
+    /* Primary colors */
+    --clr-very-dark-blue:        hsl(233, 47%, 7%);  /* (main background)     */
+    --clr-dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background      */
+    --clr-soft-violet:           hsl(277, 64%, 61%); /* (accent)              */
+    --clr-image-violet:          hsl(278, 56%, 30%); /* (image color overlay) */
+
+    /* Neutral colors */
+    --clr-white:                           hsl(0, 0%, 100%);        /* (main heading, stats) */
+    --clr-slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75); /* (main paragraph)      */
+    --clr-slightly-transpatert-white-stat: hsla(0, 0%, 100%, 0.6);  /* (stat headings)       */
+
+    /* Font */
+
+    --fw-regular: 400;
+    --fw-bold:    700;
+}
+
+
+
+/*
+    BODY
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    font-family: 'Inter';
+    font-weight: var(--fw-regular);
+    color: var(--clr-white);
+
+    background-color: var(--clr-very-dark-blue);
+}
+
+/*
+    MAIN
+*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: var(--clr-dark-desaturated-blue);
+
+    overflow: hidden;
+    border-radius: 10px;
+
+    width: 21rem;
+
+    margin: auto;
+}
+
+
+/* 
+    IMAGE SECTION
+*/
+
+.image {
+    position: relative;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--clr-image-violet);
+    opacity: 0.8;
+}
+
+
+/*
+    CONTENT SECTION
+*/
+
+.header {
+    font-weight: var(--fw-bold);
+    font-size: 1.7rem;
+
+    margin-bottom: 1rem;
+}
+
+.header span {
+    color: var(--clr-soft-violet);
+}
+
+.description {
+    color: var(--clr-slightly-transparent-white-main);
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+
+.main-text {
+    margin: 2.5rem
+}
+
+.flex-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-elements .element {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-elements .element .number {
+    color: var(--clr-white);
+    font-size: 1.3rem;
+    font-weight: var(--fw-bold);
+
+    margin-bottom: 0.4rem;
+}
+
+.flex-elements .text {
+    font-family: 'Lexend Deca';
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    color: var(--clr-slightly-transpatert-white-stat);
+
+    margin-bottom: 1.75rem;
+}
+
+/*
+    DESKTOP
+*/
+
+@media(min-width:1440px) {
+    main {
+        flex-direction: row-reverse;
+        width: 67.46rem;
+        max-height: 27.8rem;
+        text-align: start;
+    }
+
+    .main-text {
+        margin-left: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .content {
+        width: 33.73rem;
+    }
+
+    .header {
+        font-size: 2.3rem;
+    }
+
+    .description {
+        padding-right: 6rem;
+    }
+
+    .flex-elements {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+        margin-left: 3rem
+    }
+
+    .flex-elements .element {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-elements .element .number {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/*
+    FOOTER
+*/
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+
+    color: var(--clr-slightly-transparent-white-main);
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
