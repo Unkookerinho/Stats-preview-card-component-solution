@@ -31,7 +31,6 @@ img, picture, svg, video {
     --clr-very-dark-blue:        hsl(233, 47%, 7%);  /* (main background)     */
     --clr-dark-desaturated-blue: hsl(244, 38%, 16%); /* (card background      */
     --clr-soft-violet:           hsl(277, 64%, 61%); /* (accent)              */
-    --clr-image-violet:          hsl(278, 56%, 30%); /* (image color overlay) */
 
     /* Neutral colors */
     --clr-white:                           hsl(0, 0%, 100%);        /* (main heading, stats) */
@@ -105,7 +104,8 @@ main {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--clr-image-violet);
+    background-color: var(--clr-soft-violet);
+    mix-blend-mode: multiply;
     opacity: 0.8;
 }
 
@@ -169,7 +169,7 @@ main {
     DESKTOP
 */
 
-@media(min-width:1440px) {
+@media(min-width:1140px) {
     main {
         flex-direction: row-reverse;
         width: 67.46rem;
